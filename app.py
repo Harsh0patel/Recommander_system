@@ -50,7 +50,7 @@ def recommand(movie_name: str, n: int):
             id = df_movies.iloc[i][0]
             poster_url = get_poster_url(id, api_key)
             movies_urls.append(poster_url)
-    return recommanded_movies
+    return recommanded_movies, movies_urls
 
 st.title('Movie Recommendation System')
 movie_name = st.selectbox(
