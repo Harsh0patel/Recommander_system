@@ -24,6 +24,3 @@ This project is a content-based movie recommendation system built using **bag-of
 - Streamlit (Web UI)
 - Pandas / NumPy
 - Optionally: local images or URLs for posters
-
-## Second system using bag-of-words vectors
-https://harsh0patel-recommander-system-app-2-n1p94t.streamlit.app/
