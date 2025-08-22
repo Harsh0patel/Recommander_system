@@ -47,7 +47,7 @@ def get_poster_url(imdb_id, api_key):
     return None
 
 def recommand(movie_name: str, n: int):
-    api_key="505ef5024357151eabff3f2cab14c459"
+    # api key = api key
     recommanded_movies = []
     movies_urls = []
     # Find the index of the movie by title
