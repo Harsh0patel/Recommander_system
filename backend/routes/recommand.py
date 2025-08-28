@@ -40,6 +40,6 @@ def recommand(data : recommand):
     _, ind = knn.kneighbors(vector[movie_idx].reshape(1, -1), n_neighbors=n+1)
     for i in ind[0]:
         if i != movie_idx:
-            # poster_url = url.get_poster_url(i, api_key)
-            recommanded_movies.append({"title":df.iloc[i][1],"poster": "image"})
+            poster_url = url.get_poster_url(i, api_key)
+            recommanded_movies.append({"title":df.iloc[i][1],"poster": poster_url})
     return JSONResponse(recommanded_movies, status_code=200)  

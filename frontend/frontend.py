@@ -73,7 +73,7 @@ if selected_movie and st.button("Recommand"):
             cols = st.columns(5)
             for j, col in enumerate(cols):
                 if i + j < len(recommended_movies):
-                    # col.image(movie[i + j]["poster"], use_column_width = True)
+                    col.image(recommended_movies[i + j]["poster"], use_column_width = True)
                     col.markdown(f'<p class="card-title">{recommended_movies[i + j]["title"]}</p>', unsafe_allow_html=True)
     else:
         st.error("Failed to Generate Movie try again!")
