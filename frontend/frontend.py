@@ -9,7 +9,7 @@ API = "http://152.67.27.78:8000"
 
 @st.cache_data
 def data():
-    df = pd.read_csv("frontend/data/names.csv")
+    df = pd.read_csv("data/names.csv")
     return df['title']
 
 # ---------------- PAGE CONFIG ---------------- #
@@ -60,7 +60,7 @@ selected_movie = st.selectbox("Search a movie:", movie_list)
 if selected_movie and st.button("Recommand"):
     res = requests.post(f"{API}/api/recommand", json = {
         "movie_name" : selected_movie,
-        "n" : 20
+        "n" : 10
     })
     if res.status_code == 200:
         recommended_movies = res.json()
@@ -74,7 +74,7 @@ if selected_movie and st.button("Recommand"):
             cols = st.columns(5)
             for j, col in enumerate(cols):
                 if i + j < len(recommended_movies):
-                    col.image(recommended_movies[i + j]["poster"], use_column_width = True)
+                    col.image(recommended_movies[i + j]["poster"], use_container_width = True)
                     col.markdown(f'<p class="card-title">{recommended_movies[i + j]["title"]}</p>', unsafe_allow_html=True)
     else:
         st.error("Failed to Generate Movie try again!")
