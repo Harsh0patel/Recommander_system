@@ -4,7 +4,7 @@ import pandas as pd
 import requests
 
 # API Configuration
-API = "http://127.0.0.1:8000"
+API = "http://152.67.27.78:8000"
 
 @st.cache_data
 def data():
