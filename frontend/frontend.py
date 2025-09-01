@@ -1,4 +1,5 @@
 import streamlit as st
+import data
 from PIL import Image
 import pandas as pd
 import requests
@@ -8,7 +9,7 @@ API = "http://152.67.27.78:8000"
 
 @st.cache_data
 def data():
-    df = pd.read_csv('data/names.csv')
+    df = pd.read_csv("frontend/data/names.csv")
     return df['title']
 
 # ---------------- PAGE CONFIG ---------------- #
