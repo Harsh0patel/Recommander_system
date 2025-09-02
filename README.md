@@ -193,8 +193,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Harsh Patel**
 - GitHub: [@Harsh0patel](https://github.com/Harsh0patel)
-- Email: [Your Email]
-- LinkedIn: [Your LinkedIn Profile]
+- Email: hp333854@gmail.com
+- LinkedIn: www.linkedin.com/in/harsh-patel-548807252
 
 ## ⭐ Star History
 
